@@ -3,7 +3,8 @@ const categoriesRouter=require("express").Router();
 const { checkAuth } = require("../middlewares/auth");
 // Импортируем вспомогательные функции
 const {
-  findAllCategories, 
+  findAllCategories,
+  findCategoryById, 
   createCategory, 
   updateCategory, 
   checkEmptyName, 
@@ -12,6 +13,7 @@ const {
 }=require('../middlewares/categories');
 const {
   sendAllCategories, 
+  sendCategoryById,
   sendCategoryCreated, 
   sendCategoryUpdated, 
   sendCategoryDeleted
@@ -32,7 +34,9 @@ categoriesRouter.post(
   createCategory,
   sendCategoryCreated
 );
-categoriesRouter.get("/categories/:id", findCategoryById, sendCategoryById);
+categoriesRouter.get("/categories/:id", 
+findCategoryById, 
+sendCategoryById);
 categoriesRouter.put(
   "/categories/:id",
   checkEmptyName,
