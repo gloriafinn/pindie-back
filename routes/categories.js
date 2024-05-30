@@ -12,6 +12,7 @@ const {
 }=require('../middlewares/categories');
 const {
   sendAllCategories, 
+  sendCategoryById,
   sendCategoryCreated, 
   sendCategoryUpdated, 
   sendCategoryDeleted

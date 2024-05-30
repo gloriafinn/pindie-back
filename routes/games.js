@@ -14,6 +14,7 @@ const {
   deleteGame}=require('../middlewares/games');
 const {
   sendAllGames, 
+  sendGameById,
   sendGameCreated, 
   sendGameUpdated,  
   sendGameDeleted}=require('../controllers/games');
