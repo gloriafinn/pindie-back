@@ -3,7 +3,8 @@ const categoriesRouter=require("express").Router();
 const { checkAuth } = require("../middlewares/auth");
 // Импортируем вспомогательные функции
 const {
-  findAllCategories, 
+  findAllCategories,
+  findCategoryById, 
   createCategory, 
   updateCategory, 
   checkEmptyName, 
