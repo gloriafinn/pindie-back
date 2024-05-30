@@ -32,7 +32,9 @@ categoriesRouter.post(
   createCategory,
   sendCategoryCreated
 );
-categoriesRouter.get("/categories/:id", findCategoryById, sendCategoryById);
+categoriesRouter.get("/categories/:id", 
+findCategoryById, 
+sendCategoryById);
 categoriesRouter.put(
   "/categories/:id",
   checkEmptyName,
